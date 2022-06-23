@@ -1,0 +1,142 @@
+:root {
+	--animation-duration: 1s;
+	--animation-delay: 150ms;
+}
+
+.animation {
+	animation-duration: var(--animation-duration);
+	animation-fill-mode: both;
+}
+
+.animation-delay-1 {
+	animation-delay: var(--animation-delay);
+}
+.animation-delay-2 {
+	animation-delay: calc(var(--animation-delay) * 2);
+}
+.animation-delay-3 {
+	animation-delay: calc(var(--animation-delay) * 3);
+}
+.animation-delay-4 {
+	animation-delay: calc(var(--animation-delay) * 4);
+}
+.animation-delay-5 {
+	animation-delay: calc(var(--animation-delay) * 5);
+}
+.animation-delay-6 {
+	animation-delay: calc(var(--animation-delay) * 6);
+}
+.animation-delay-7 {
+	animation-delay: calc(var(--animation-delay) * 7);
+}
+.animation-delay-8 {
+	animation-delay: calc(var(--animation-delay) * 8);
+}
+.animation-delay-9 {
+	animation-delay: calc(var(--animation-delay) * 9);
+}
+.animation-delay-10 {
+	animation-delay: calc(var(--animation-delay) * 10);
+}
+
+.animation-speed-slower {
+	animation-duration: calc(var(--animation-duration) * 3);
+}
+.animation-speed-slow {
+	animation-duration: calc(var(--animation-duration) * 2);
+}
+.animation-speed-fast {
+	animation-duration: calc(var(--animation-duration) * 0.8);
+}
+.animation-speed-faster {
+	animation-duration: calc(var(--animation-duration) / 2);
+}
+
+/* Fade In  */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+.animation-fadeIn {
+	animation-name: fadeIn;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+.animation-fadeInUp {
+	animation-duration: calc(var(--animation-duration) * 0.6);
+	animation-name: fadeInUp;
+}
+
+@keyframes slideInUp {
+	from {
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+		visibility: visible;
+	}
+
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+.animation-slideInUp {
+	animation-name: slideInUp;
+}
+
+/* Bounce In  */
+@keyframes bounceIn {
+	from,
+	20%,
+	40%,
+	60%,
+	80%,
+	to {
+		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	}
+
+	0% {
+		opacity: 0;
+		transform: scale3d(0.3, 0.3, 0.3);
+	}
+
+	20% {
+		transform: scale3d(1.1, 1.1, 1.1);
+	}
+
+	40% {
+		transform: scale3d(0.9, 0.9, 0.9);
+	}
+
+	60% {
+		opacity: 1;
+		transform: scale3d(1.03, 1.03, 1.03);
+	}
+
+	80% {
+		transform: scale3d(0.97, 0.97, 0.97);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale3d(1, 1, 1);
+	}
+}
+.animation-bounceIn {
+	animation-duration: calc(var(--animation-duration) * 0.75);
+	animation-name: bounceIn;
+}
