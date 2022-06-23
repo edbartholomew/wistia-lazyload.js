@@ -2,10 +2,7 @@
 
 name: Deploy to GitHub Pages
 
-on:
-    push:
-        paths:
-            - 'demo/**'
+on: [push]
 
 permissions:
     contents: write
