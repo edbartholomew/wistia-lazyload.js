@@ -1,1 +1,0 @@
-import wistiaLazyload from '../../../../dist/wistia-lazyload';

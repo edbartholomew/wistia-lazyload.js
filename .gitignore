@@ -1,6 +1,0 @@
-# System files
-.DS_Store
-Thumbs.db
-
-# Dependencies folder
-node_modules
